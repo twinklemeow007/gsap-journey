@@ -11,7 +11,7 @@ window.addEventListener("scroll", () => {
 
    
 
-    if(window.scrollY > 100) {
+    if(window.scrollY > 500) {
         button.classList.add('show');
 
 
@@ -33,6 +33,19 @@ window.addEventListener("scroll", () => {
 
 })
 
+button.addEventListener("mouseenter", () => {
+    gsap.to(button, { scale:1.1, duration:0.2 });
+});
+button.addEventListener("mouseleave", () => {
+    gsap.to(button, { scale:1, duration:0.2 });
+});
+
+button.addEventListener("click", () => {
+     window.scrollTo(0, 0);
+})
+
+
+
 /* import gsap from "gsap";
 
 const button = document.querySelector(".scroll-to-top");
@@ -42,7 +55,7 @@ let isFloating = false;
 let isFloating2 = false;
 
 window.addEventListener("scroll", () => {
-    if(window.scrollY > 100) {
+    if(window.scrollY > 500) {
         button.classList.add('show');
         button2.classList.add('show');
 
