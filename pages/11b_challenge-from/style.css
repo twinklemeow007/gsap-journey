@@ -33,3 +33,11 @@
   background: linear-gradient(135deg, #ff7675, #fd79a8);
   transform: rotateY(180deg);
 }
+
+.card-container{
+  perspective: 1000px;
+}
+
+.card-face{
+  transform-style: preserve-3d;
+}
